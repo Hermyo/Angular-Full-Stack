@@ -17,6 +17,8 @@ import { LogoutComponent } from './logout/logout.component';
 import { AccountComponent } from './account/account.component';
 import { AdminComponent } from './admin/admin.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { DwarfService } from './services/dwarf.service';
+import { DwarfsComponent } from './dwarfs/dwarfs.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -33,6 +35,7 @@ export function tokenGetter() {
     AccountComponent,
     AdminComponent,
     NotFoundComponent,
+    DwarfsComponent,
   ],
   imports: [
     RoutingModule,
@@ -50,6 +53,7 @@ export function tokenGetter() {
     AuthGuardAdmin,
     CatService,
     UserService,
+    DwarfService,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent],
